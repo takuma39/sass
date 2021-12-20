@@ -1,0 +1,113 @@
+/* ===========================
+ .news
+=========================== */
+.news {
+  background: #f0f0f0;
+  padding: 100px 0;
+
+  @include mq("max", "md") {
+    padding: 50px 0;
+  }
+
+  /*
+   .news__title
+  =========================== */
+  &__title {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+
+    @include mq("max", "md") {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    span {
+      font-size: 16px;
+      margin-left: 16px;
+
+      @include mq("max", "md") {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  /*
+   .news__list
+  =========================== */
+  &__list {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 40px;
+
+    @include mq("max", "md") {
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: calc(100% / 4 - 15px);
+
+      @include mq("max", "md") {
+        width: calc(100% / 2 - 2%);
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+
+        @include mq("max", "md") {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        @include mq("max", "md") {
+          margin-right: 4%;
+        }
+      }
+
+      &:nth-child(n + 3) {
+        @include mq("max", "md") {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    &-txt {
+      margin-top: 10px;
+      font-size: 14px;
+
+      dd {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  /*
+   .news__button
+  =========================== */
+  &__button {
+    border: 1px solid #242424;
+    width: 180px;
+    margin: 60px auto 0;
+
+    @include mq("max", "md") {
+      width: 90%;
+    }
+
+    a {
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+      color: #242424;
+
+      &:hover {
+        color: #fff;
+        background: #242424;
+      }
+    }
+  }
+}

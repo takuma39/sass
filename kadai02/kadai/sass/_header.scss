@@ -1,0 +1,53 @@
+/* ===========================
+ .header
+=========================== */
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+
+  @include mq("max", "md") {
+    padding: 20px 0 20px;
+    justify-content: center;
+  }
+}
+
+/*
+ .header__navi
+=========================== */
+.header__navi {
+  display: flex;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    a {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}
+
+/*
+ .header__sns
+=========================== */
+.header__sns {
+  display: flex;
+
+  @include mq("max", "md") {
+    display: none;
+  }
+
+  li {
+    width: 45px;
+    height: 45px;
+  }
+}

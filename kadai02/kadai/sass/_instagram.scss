@@ -1,0 +1,101 @@
+/* ===========================
+ .instagram
+=========================== */
+.instagram {
+  background: #fff;
+  padding: 100px 0;
+
+  @include mq("max", "md") {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  /*
+   .instagram__title
+  =========================== */
+  &__title {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+
+    @include mq("max", "md") {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 16px;
+      margin-left: 16px;
+
+      @include mq("max", "md") {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  /*
+   .instagram__list
+  =========================== */
+  &__list {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 40px;
+
+    @include mq("max", "md") {
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: calc(100% / 4 - 15px);
+
+      @include mq("max", "md") {
+        width: calc(100% / 2 - 2%);
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      @include mq("max", "md") {
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        &:nth-child(odd) {
+          margin-right: 4%;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  /*
+   .instagram__button
+  =========================== */
+  &__button {
+    border: 1px solid #242424;
+    width: 180px;
+    margin: 60px auto 0;
+
+    @include mq("max", "md") {
+      width: 90%;
+    }
+
+    a {
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+      color: #242424;
+
+      &:hover {
+        color: #fff;
+        background: #242424;
+      }
+    }
+  }
+}

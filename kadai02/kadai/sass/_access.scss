@@ -1,0 +1,79 @@
+/* ===========================
+ .access
+=========================== */
+.access {
+  background: #f0f0f0;
+  padding: 100px 0;
+
+  @include mq("max", "md") {
+    padding: 50px 0;
+  }
+
+  /*
+   .access__title
+  =========================== */
+  &__title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  /*
+   .access__map
+  =========================== */
+  &__map {
+    margin-top: 50px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  /*
+   .access__detail
+  =========================== */
+  &__detail {
+    width: 50%;
+    margin: 0 auto;
+    margin: 40px auto 0;
+
+    @include mq("max", "md") {
+      width: 80%;
+    }
+
+    dl {
+      display: flex;
+
+      @include mq("max", "md") {
+        flex-direction: column;
+      }
+
+      &:not(:first-child) {
+        margin-top: 30px;
+
+        @include mq("max", "md") {
+          margin-top: 40px;
+        }
+      }
+
+      dt {
+        flex: 1;
+        font-size: 14px;
+
+        @include mq("max", "md") {
+          font-weight: bold;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+      }
+
+      dd {
+        flex: 2;
+        font-size: 14px;
+
+        div:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

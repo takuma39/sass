@@ -1,0 +1,42 @@
+/* ===========================
+ nav
+=========================== */
+nav {
+  background-color: $mainColor;
+
+  ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    @include mq("max", "md") {
+      flex-wrap: wrap;
+    }
+
+    @include mq("max", "lg") {
+      width: 100%;
+    }
+
+    li {
+      width: 120px;
+      height: 60px;
+
+      @include mq("max", "md") {
+        margin: 6px 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+
+        @include mq("max", "md") {
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+}

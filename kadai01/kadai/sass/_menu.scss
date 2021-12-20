@@ -1,0 +1,94 @@
+/* ===========================
+ .menu
+=========================== */
+.menu {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include mq("max", "md") {
+    margin: 30px auto 0;
+  }
+  @include mq("max", "lg") {
+    width: 100%;
+  }
+
+  /*
+  .menu__content
+  =========================== */
+  &__content {
+    display: flex;
+    text-align: center;
+
+    @include mq("max", "md") {
+      display: block;
+      position: relative;
+    }
+
+    &--text {
+      flex: 1;
+
+      @include mq("max", "md") {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 99;
+      }
+
+      img {
+        margin-top: 80px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 20px 0 50px;
+        font-size: 1.3em;
+      }
+
+      p {
+        width: 65%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &--image {
+      flex: 1;
+      height: 600px;
+
+      @include mq("max", "md") {
+        position: relative;
+        margin-bottom: 2px;
+      }
+
+      /*背景画像に黒いカバーをかける方法*/
+      &::before {
+        @include mq("max", "md") {
+          height: 600px;
+          background-color: rgba(0, 0, 0, 0.6);
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: " ";
+        }
+      }
+    }
+  }
+
+  /*
+  .img-cording
+  =========================== */
+  .img-cording {
+    background: url("../images/menu_cording.jpg") no-repeat center center /
+      cover;
+  }
+
+  /*
+  .img-design
+  =========================== */
+  .img-design {
+    background: url("../images/menu_design.jpg") no-repeat center center / cover;
+  }
+}

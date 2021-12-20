@@ -1,0 +1,582 @@
+@charset "UTF-8";
+/* マップ $map:(key: value)  各幅の値を登録しておく */
+/*変数定義前に自動で値を代入させるため*/
+/* @mixin = 引数によってスタイルの設定を細かく指示 */
+/************************
+* 初期設定
+************************/
+body {
+  font-family: "Yu Gothic", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  display: block;
+  text-decoration: none; }
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
+
+/* ===========================
+ layout
+=========================== */
+/*******************
+* header footer
+*******************/
+/* ===========================
+ .header
+=========================== */
+.header {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  z-index: 1;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */ }
+  @media screen and (max-width: 480px) {
+    .header {
+      padding: 20px 0 20px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+/*
+ .header__navi
+=========================== */
+.header__navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .header__navi li:not(:last-child) {
+    margin-right: 14px; }
+  .header__navi li a {
+    color: #fff;
+    font-size: 12px; }
+
+/*
+ .header__sns
+=========================== */
+.header__sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */ }
+  @media screen and (max-width: 480px) {
+    .header__sns {
+      display: none; } }
+  .header__sns li {
+    width: 45px;
+    height: 45px; }
+
+/* ===========================
+ .logo
+=========================== */
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(../img/mv.jpg) center/cover no-repeat;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */ }
+  @media screen and (max-width: 480px) {
+    .logo {
+      height: 467px; } }
+  .logo h1 {
+    width: 150px; }
+
+/* ===========================
+ .footer
+=========================== */
+.footer {
+  background-color: #242424;
+  /*
+   .footer__inner
+  =========================== */ }
+  .footer__inner {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0; }
+    .footer__inner-navi {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 30px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .footer__inner-navi {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
+      .footer__inner-navi li {
+        margin: 0 10px; }
+        .footer__inner-navi li:not(:last-child) {
+          /* $breakpoints = マップ、から値を取得(map関数) */
+          /* xxx-width: と1px調整 */ }
+          @media screen and (max-width: 480px) {
+            .footer__inner-navi li:not(:last-child) {
+              margin-bottom: 10px; } }
+        .footer__inner-navi li a {
+          color: #ffffff;
+          font-size: 12px;
+          /* $breakpoints = マップ、から値を取得(map関数) */
+          /* xxx-width: と1px調整 */ }
+          @media screen and (max-width: 480px) {
+            .footer__inner-navi li a {
+              padding: 10px 0; } }
+    .footer__inner-sns {
+      border-top: 1px solid #7c7c7c;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-top: 30px; }
+      .footer__inner-sns ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .footer__inner-sns ul li {
+          width: 40px;
+          height: 40px; }
+    .footer__inner .copyright {
+      color: #ffffff;
+      font-size: 12px; }
+
+/* ===========================
+ コンテンツ
+=========================== */
+/*******************
+* philosophy
+*******************/
+/* ===========================
+ .philosophy
+=========================== */
+.philosophy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 680px;
+  background-color: #242424;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+   .philosophy_left / .philosophy_right
+  =========================== */
+  /*
+   .philosophy_button
+  =========================== */ }
+  @media screen and (max-width: 480px) {
+    .philosophy {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .philosophy__left, .philosophy__right {
+    width: 50%;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .philosophy__left, .philosophy__right {
+        width: 100%; } }
+  .philosophy__right {
+    background: url(../img/philosophy_bg.jpg) center/cover no-repeat;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .philosophy__right {
+        height: 230px; } }
+  .philosophy__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .philosophy__left {
+        padding: 0 20px;
+        width: 100%;
+        height: 450px; } }
+    .philosophy__left-top, .philosophy__left-bottom {
+      line-height: 1.6; }
+    .philosophy__left-title {
+      color: #fff;
+      font-size: 24px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .philosophy__left-title {
+          text-align: center;
+          font-size: 16px; } }
+    .philosophy__left-top {
+      margin-top: 40px;
+      color: #fff;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .philosophy__left-top {
+          font-size: 12px;
+          line-height: 1.8; } }
+    .philosophy__left-bottom {
+      margin-top: 20px;
+      color: #fff;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .philosophy__left-bottom {
+          font-size: 12px;
+          line-height: 1.8; } }
+  .philosophy__button {
+    margin-top: 50px;
+    border: 1px solid #fff;
+    width: 180px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .philosophy__button {
+        width: 100%; } }
+    .philosophy__button a {
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+      color: #fff; }
+      .philosophy__button a:hover {
+        color: #242424;
+        background: #fff; }
+
+/*******************
+* NEWS
+*******************/
+/* ===========================
+ .news
+=========================== */
+.news {
+  background: #f0f0f0;
+  padding: 100px 0;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+   .news__title
+  =========================== */
+  /*
+   .news__list
+  =========================== */
+  /*
+   .news__button
+  =========================== */ }
+  @media screen and (max-width: 480px) {
+    .news {
+      padding: 50px 0; } }
+  .news__title {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .news__title {
+        font-size: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center; } }
+    .news__title span {
+      font-size: 16px;
+      margin-left: 16px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .news__title span {
+          font-size: 12px;
+          margin-top: 10px; } }
+  .news__list {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .news__list {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+    .news__list li {
+      width: calc(100% / 4 - 15px);
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .news__list li {
+          width: calc(100% / 2 - 2%); } }
+      .news__list li:not(:last-child) {
+        margin-right: 30px;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 480px) {
+          .news__list li:not(:last-child) {
+            margin-right: 0; } }
+      .news__list li:nth-child(odd) {
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 480px) {
+          .news__list li:nth-child(odd) {
+            margin-right: 4%; } }
+      .news__list li:nth-child(n + 3) {
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 480px) {
+          .news__list li:nth-child(n + 3) {
+            margin-top: 24px; } }
+    .news__list-txt {
+      margin-top: 10px;
+      font-size: 14px; }
+      .news__list-txt dd {
+        margin-top: 10px; }
+  .news__button {
+    border: 1px solid #242424;
+    width: 180px;
+    margin: 60px auto 0;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .news__button {
+        width: 90%; } }
+    .news__button a {
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+      color: #242424; }
+      .news__button a:hover {
+        color: #fff;
+        background: #242424; }
+
+/*******************
+* INSTAGRAM
+*******************/
+/* ===========================
+ .instagram
+=========================== */
+.instagram {
+  background: #fff;
+  padding: 100px 0;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+   .instagram__title
+  =========================== */
+  /*
+   .instagram__list
+  =========================== */
+  /*
+   .instagram__button
+  =========================== */ }
+  @media screen and (max-width: 480px) {
+    .instagram {
+      width: 100%;
+      padding: 50px 0; } }
+  .instagram__title {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .instagram__title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center;
+        font-size: 16px; } }
+    .instagram__title span {
+      font-size: 16px;
+      margin-left: 16px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .instagram__title span {
+          margin-top: 10px;
+          font-size: 12px; } }
+  .instagram__list {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .instagram__list {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+    .instagram__list li {
+      width: calc(100% / 4 - 15px);
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .instagram__list li {
+          width: calc(100% / 2 - 2%); } }
+      .instagram__list li:not(:last-child) {
+        margin-right: 30px; }
+      @media screen and (max-width: 480px) {
+        .instagram__list li:not(:last-child) {
+          margin-right: 0; }
+        .instagram__list li:nth-child(odd) {
+          margin-right: 4%; }
+        .instagram__list li:nth-child(n + 3) {
+          margin-top: 24px; } }
+  .instagram__button {
+    border: 1px solid #242424;
+    width: 180px;
+    margin: 60px auto 0;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .instagram__button {
+        width: 90%; } }
+    .instagram__button a {
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+      color: #242424; }
+      .instagram__button a:hover {
+        color: #fff;
+        background: #242424; }
+
+/*******************
+* ACCESS
+*******************/
+/* ===========================
+ .access
+=========================== */
+.access {
+  background: #f0f0f0;
+  padding: 100px 0;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+   .access__title
+  =========================== */
+  /*
+   .access__map
+  =========================== */
+  /*
+   .access__detail
+  =========================== */ }
+  @media screen and (max-width: 480px) {
+    .access {
+      padding: 50px 0; } }
+  .access__title {
+    text-align: center;
+    font-size: 24px; }
+  .access__map {
+    margin-top: 50px; }
+    .access__map iframe {
+      width: 100%; }
+  .access__detail {
+    width: 50%;
+    margin: 0 auto;
+    margin: 40px auto 0;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 480px) {
+      .access__detail {
+        width: 80%; } }
+    .access__detail dl {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 480px) {
+        .access__detail dl {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; } }
+      .access__detail dl:not(:first-child) {
+        margin-top: 30px;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 480px) {
+          .access__detail dl:not(:first-child) {
+            margin-top: 40px; } }
+      .access__detail dl dt {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        font-size: 14px;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 480px) {
+          .access__detail dl dt {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px; } }
+      .access__detail dl dd {
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2;
+        font-size: 14px; }
+        .access__detail dl dd div:not(:first-child) {
+          margin-top: 10px; }

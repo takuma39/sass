@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import "_variables.scss";
+@import "_base.scss";
+
+/* ===========================
+ layout
+=========================== */
+/*******************
+* header footer
+*******************/
+@import "_header.scss";
+@import "_logo.scss";
+@import "_footer.scss";
+
+/* ===========================
+ コンテンツ
+=========================== */
+/*******************
+* philosophy
+*******************/
+@import "_philosophy.scss";
+/*******************
+* NEWS
+*******************/
+@import "_news.scss";
+/*******************
+* INSTAGRAM
+*******************/
+@import "_instagram.scss";
+/*******************
+* ACCESS
+*******************/
+@import "_access.scss";

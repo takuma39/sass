@@ -1,0 +1,24 @@
+body {
+    font:normal 16px/1.8em Arial,Helvetica,sans-serif;;
+    color: $mainColor;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  /* ===========================
+   共有
+  =========================== */
+  .btn a,
+  input[type="submit"]{
+    display:inline-block;
+    margin:0 auto;
+    padding:10px 0;
+    width:130px;
+    cursor:pointer;
+    font-size:1.3em;
+    color:$subColor;
+    text-align:center;
+    border: 10px solid $subColor;
+    background-color:transparent;
+  }

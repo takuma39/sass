@@ -1,0 +1,88 @@
+/* ===========================
+ header
+=========================== */
+header {
+  border-top: 20px solid $mainColor;
+
+  /*
+   header__contents
+  =========================== */
+  /* widthをpx指定している部分がレスポンシブ化のポイントになります */
+  .header__contents {
+    width: 1200px;
+    margin: 43px auto 88px;
+    display: flex;
+    justify-content: center;
+
+    @include mq("max", "md") {
+      display: block;
+      margin-top: 240px;
+      position: relative;
+    }
+    @include mq("max", "lg") {
+      width: 100%;
+    }
+
+    &--text {
+      align-self: flex-end;
+      margin: 0 30px;
+      width: 25%;
+      border-top: 1px solid $mainColor;
+      border-bottom: 1px solid $mainColor;
+
+      @include mq("max", "md") {
+        margin: 0 auto;
+        width: 90%;
+      }
+    }
+
+    .text-right {
+      text-align: right;
+
+      @include mq("max", "md") {
+        text-align: left;
+        border-bottom: none;
+      }
+    }
+
+    &--logo {
+      text-align: center;
+
+      @include mq("max", "md") {
+        /* position: absolute;で要素をセンターにする方法 */
+        position: absolute;
+        top: -228px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      &-mark {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  /* ===========================
+   header__image
+  =========================== */
+  .header__image {
+    position: relative;
+    height: 60vh;
+    background: $mainColor url("../images/bg_header.jpg") no-repeat right center /
+      cover;
+
+    @include mq("max", "md") {
+      position: relative;
+      height: 40vh;
+      background: $mainColor url("../images/bg_header.jpg") no-repeat right center /
+        cover;
+    }
+
+    img {
+      position: absolute;
+      top: -60px;
+      right: 5vw;
+    }
+  }
+}

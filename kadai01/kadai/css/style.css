@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/* マップ $map:(key: value)  各幅の値を登録しておく */
+/*変数定義前に自動で値を代入させるため*/
+/* @mixin = 引数によってスタイルの設定を細かく指示 */
+body {
+  font: normal 16px/1.8em Arial,Helvetica,sans-serif;
+  color: #7bc2ba; }
+
+a {
+  text-decoration: none; }
+
+/* ===========================
+   共有
+  =========================== */
+.btn a,
+input[type="submit"] {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 130px;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #58847f;
+  text-align: center;
+  border: 10px solid #58847f;
+  background-color: transparent; }
+
+/* ===========================
+ layout
+=========================== */
+/* ===========================
+ header
+=========================== */
+header {
+  border-top: 20px solid #7bc2ba;
+  /*
+   header__contents
+  =========================== */
+  /* widthをpx指定している部分がレスポンシブ化のポイントになります */
+  /* ===========================
+   header__image
+  =========================== */ }
+  header .header__contents {
+    width: 1200px;
+    margin: 43px auto 88px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 768px) {
+      header .header__contents {
+        display: block;
+        margin-top: 240px;
+        position: relative; } }
+    @media screen and (max-width: 1215px) {
+      header .header__contents {
+        width: 100%; } }
+    header .header__contents--text {
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin: 0 30px;
+      width: 25%;
+      border-top: 1px solid #7bc2ba;
+      border-bottom: 1px solid #7bc2ba;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        header .header__contents--text {
+          margin: 0 auto;
+          width: 90%; } }
+    header .header__contents .text-right {
+      text-align: right;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        header .header__contents .text-right {
+          text-align: left;
+          border-bottom: none; } }
+    header .header__contents--logo {
+      text-align: center;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        header .header__contents--logo {
+          /* position: absolute;で要素をセンターにする方法 */
+          position: absolute;
+          top: -228px;
+          left: 0;
+          right: 0;
+          margin: auto; } }
+      header .header__contents--logo-mark {
+        margin-bottom: 20px; }
+  header .header__image {
+    position: relative;
+    height: 60vh;
+    background: #7bc2ba url("../images/bg_header.jpg") no-repeat right center/cover;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 768px) {
+      header .header__image {
+        position: relative;
+        height: 40vh;
+        background: #7bc2ba url("../images/bg_header.jpg") no-repeat right center/cover; } }
+    header .header__image img {
+      position: absolute;
+      top: -60px;
+      right: 5vw; }
+
+/* ===========================
+ nav
+=========================== */
+nav {
+  background-color: #7bc2ba; }
+  nav ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+    @media screen and (max-width: 1215px) {
+      nav ul {
+        width: 100%; } }
+    nav ul li {
+      width: 120px;
+      height: 60px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        nav ul li {
+          margin: 6px 0; } }
+      nav ul li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 100%;
+        color: #fff;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 768px) {
+          nav ul li a {
+            border: 1px solid #fff; } }
+
+/* ===========================
+ footer
+=========================== */
+footer {
+  text-align: center;
+  /* 
+   .footer
+  =========================== */ }
+  footer .footer {
+    color: #fff;
+    padding: 60px 0 70px;
+    background-color: #7bc2ba;
+    /* 
+     .footer__image
+    =========================== */
+    /* 
+     .footer__column
+    =========================== */
+    /* 
+     .footer__copy
+    =========================== */ }
+    footer .footer h2 {
+      font-size: 50px;
+      margin: 30px auto 80px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        footer .footer h2 {
+          font-size: 2em; } }
+    footer .footer__image {
+      width: 100%;
+      height: 600px;
+      background: #7bc2ba url("../images/bg_footer.jpg") no-repeat center center/cover;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        footer .footer__image {
+          height: 40vh; } }
+    footer .footer__column {
+      width: 1200px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 40px auto 100px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        footer .footer__column {
+          display: block; } }
+      @media screen and (max-width: 1215px) {
+        footer .footer__column {
+          width: 100%; } }
+      footer .footer__column--form {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        width: 60%;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 768px) {
+          footer .footer__column--form {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            width: 100%; } }
+        footer .footer__column--form form {
+          width: 60%;
+          margin: 10px auto 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: left;
+          /* $breakpoints = マップ、から値を取得(map関数) */
+          /* xxx-width: と1px調整 */ }
+          @media screen and (max-width: 768px) {
+            footer .footer__column--form form {
+              width: 80%; } }
+          footer .footer__column--form form p {
+            font-size: 0.9em;
+            margin-bottom: 15px; }
+          footer .footer__column--form form input[type="text"] {
+            margin: 0 0 20px 0;
+            padding: 5px 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: none; }
+          footer .footer__column--form form textarea {
+            margin: 0 0 20px 0;
+            padding: 10px;
+            height: 8em;
+            font-size: 1.3em;
+            border-radius: 5px;
+            border: none; }
+      footer .footer__column--map {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        text-align: left;
+        width: 500px;
+        height: 450px;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 1215px) {
+          footer .footer__column--map {
+            margin: 0 auto;
+            width: 97%; } }
+        footer .footer__column--map iframe {
+          width: 500px;
+          height: 450px;
+          /* $breakpoints = マップ、から値を取得(map関数) */
+          /* xxx-width: と1px調整 */
+          /* $breakpoints = マップ、から値を取得(map関数) */
+          /* xxx-width: と1px調整 */ }
+          @media screen and (max-width: 768px) {
+            footer .footer__column--map iframe {
+              width: 90%;
+              margin: 50px auto 0;
+              text-align: center; } }
+          @media screen and (max-width: 1215px) {
+            footer .footer__column--map iframe {
+              width: 40vw;
+              height: 450px; } }
+    footer .footer__copy {
+      font-size: 0.8em;
+      padding: 20px 0;
+      color: #aaa; }
+
+/* ===========================
+ コンテンツ
+=========================== */
+/* ===========================
+ .menu
+=========================== */
+.menu {
+  width: 1200px;
+  margin: 0 auto;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+  .menu__content
+  =========================== */
+  /*
+  .img-cording
+  =========================== */
+  /*
+  .img-design
+  =========================== */ }
+  @media screen and (max-width: 768px) {
+    .menu {
+      margin: 30px auto 0; } }
+  @media screen and (max-width: 1215px) {
+    .menu {
+      width: 100%; } }
+  .menu__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 768px) {
+      .menu__content {
+        display: block;
+        position: relative; } }
+    .menu__content--text {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        .menu__content--text {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          z-index: 99; } }
+      .menu__content--text img {
+        margin-top: 80px;
+        text-align: center; }
+      .menu__content--text h1 {
+        margin: 20px 0 50px;
+        font-size: 1.3em; }
+      .menu__content--text p {
+        width: 65%;
+        margin: 0 auto 20px; }
+    .menu__content--image {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      height: 600px;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */
+      /*背景画像に黒いカバーをかける方法*/ }
+      @media screen and (max-width: 768px) {
+        .menu__content--image {
+          position: relative;
+          margin-bottom: 2px; } }
+      .menu__content--image::before {
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 768px) {
+          .menu__content--image::before {
+            height: 600px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: " "; } }
+  .menu .img-cording {
+    background: url("../images/menu_cording.jpg") no-repeat center center/cover; }
+  .menu .img-design {
+    background: url("../images/menu_design.jpg") no-repeat center center/cover; }
+
+/* ===========================
+ .vision
+=========================== */
+.vision {
+  position: relative;
+  /* $breakpoints = マップ、から値を取得(map関数) */
+  /* xxx-width: と1px調整 */
+  /*
+   .vision__image
+  =========================== */
+  /*
+   .vision__column
+  =========================== */ }
+  @media screen and (max-width: 768px) {
+    .vision {
+      margin-top: 50px; } }
+  .vision__image {
+    border-top: 60px solid #7bc2ba;
+    height: 600px;
+    background: #7bc2ba url("../images/bg_contents.") no-repeat center center/cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /*背景画像に黒いカバーをかける方法*/ }
+    .vision__image::before {
+      height: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: " "; }
+    .vision__image h1 {
+      font: bold 31px/2.3em sans-serif;
+      text-align: center;
+      color: #fff;
+      z-index: 99;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        .vision__image h1 {
+          font: bold 1.6em/1.9em sans-serif; } }
+    .vision__image p {
+      margin-top: 75px;
+      z-index: 99; }
+  .vision__column {
+    width: 1200px;
+    margin: 80px auto 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */
+    /* $breakpoints = マップ、から値を取得(map関数) */
+    /* xxx-width: と1px調整 */ }
+    @media screen and (max-width: 768px) {
+      .vision__column {
+        width: 90%;
+        margin: 10px auto;
+        display: block; } }
+    @media screen and (max-width: 1215px) {
+      .vision__column {
+        width: 97%; } }
+    .vision__column--item {
+      width: 30%;
+      text-align: left;
+      /* $breakpoints = マップ、から値を取得(map関数) */
+      /* xxx-width: と1px調整 */ }
+      @media screen and (max-width: 768px) {
+        .vision__column--item {
+          width: 90%;
+          margin-top: 40px;
+          text-align: left; } }
+      .vision__column--item-img {
+        margin: 0 0 50px;
+        text-align: center;
+        /* $breakpoints = マップ、から値を取得(map関数) */
+        /* xxx-width: と1px調整 */ }
+        @media screen and (max-width: 768px) {
+          .vision__column--item-img {
+            margin: 0 0 10px;
+            text-align: center; } }
+        .vision__column--item-img img {
+          height: 200px; }
